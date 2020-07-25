@@ -25,3 +25,22 @@ Expected behavior:
 Similar to the “Recents” tab in the phone app, the toolbar item (in this case a segmented picker) should be visible, and the navigation title should only appear while the table is completely scrolled to the top. When the user scrolls the list to see further content, the navigation bar should become opaque/blurred background and the navigation title scrolled underneath but without being visible in the navigation bar.
 
 Attached is a sample app that *should* replicate the behavior of the “Recents” tab in terms of layout of navigation title and toolbar items. However, when the navigation title is set, then only the title is displayed. If the navigation title is not set then the segmented picker is visible. In the case of the large/automatic display style, if there is no navigation title then there is a blank space enforced at the top of the view for the unset title.
+
+## navigationtitle-large
+
+Title: ScrollView within NavigationView immediately hides navigation title with automatic/large
+Feedback Number: FB8140531
+Submitted: July 24, 2020
+
+Repro:
+- extract attached project
+- use simulator or preview to test
+- tap the “Scroll” tab item
+- begin scrolling the view
+- note: the “Scroll” title immediately jumps into the navigation bar and adjusts the scroll offset suddenly
+- tap the “List” tab item
+- begin scrolling the view
+- note: the “List” title slides up under the navigation bar and into the title position as expected (smoothly) and does obviously adjust the scroll offset
+
+Expected output:
+Both uses behave the same
