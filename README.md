@@ -2,9 +2,9 @@
 
 ## listview-scrollviewreader 
 
-Title: ListView should suport ScrollViewReader
-Feedback Number: FB8094063
-Submitted: July 21, 2020
+**Title:** ListView should suport ScrollViewReader<br>
+**Feedback Number:** FB8094063<br>
+**Submitted:** July 21, 2020
 
 ListView has a scroll view, it should support ScrollViewReader for programmatic scrolling to specific content. Currently there is no way to programmatically scroll a ListView to a specific row/section.
 
@@ -14,9 +14,9 @@ There is no obvious way to get ListView style formatting when using a ScrollView
 
 ## recents-tab-sample
 
-Tool: Toolbar item in principal location conflicts with navigation title regardless of mode
-Feedback Number: FB8071544
-Submitted: July 19, 2020
+**Tool:** Toolbar item in principal location conflicts with navigation title regardless of mode<br>
+**Feedback Number:** FB8071544<br>
+**Submitted:** July 19, 2020
 
 Issue:
 When setting a toolbar item to use the principal placement and displaying a view with a navigation title and a display mode of any value, the toolbar item is not displayed.
@@ -28,9 +28,9 @@ Attached is a sample app that *should* replicate the behavior of the â€œRecentsâ
 
 ## navigationtitle-large
 
-Title: ScrollView within NavigationView immediately hides navigation title with automatic/large
-Feedback Number: FB8140531
-Submitted: July 24, 2020
+**Title:** ScrollView within NavigationView immediately hides navigation title with automatic/large<br>
+**Feedback Number:** FB8140531<br>
+**Submitted:** July 24, 2020
 
 Repro:
 - extract attached project
@@ -47,9 +47,9 @@ Both uses behave the same
 
 ## listview-editmode-move
 
-Title: List edit reorder control changes divider trailing inset
-Feedback Number: FB8141728
-Submitted: July 24, 2020
+**Title:** List edit reorder control changes divider trailing inset<br>
+**Feedback Number:** FB8141728<br>
+**Submitted:** July 24, 2020
 
 Repro:
 - extract attached project
