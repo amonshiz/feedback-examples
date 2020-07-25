@@ -44,3 +44,21 @@ Repro:
 
 Expected output:
 Both uses behave the same
+
+## listview-editmode-move
+
+Title: List edit reorder control changes divider trailing inset
+Feedback Number: FB8141728
+Submitted: July 24, 2020
+
+Repro:
+- extract attached project
+- build and run
+- tap “SwiftUI” tab
+- tap “Edit” button
+- note: when put into edit mode the following: even without delete mode enabled the leading side offsets change, the reorder control is displayed on each cell but the trailing inset for the divider changes
+
+- tap the “UIKit” tab
+- tap the “Edit” button
+- note: when put into edit mode the divider trailing insets are not changed when the reorder is displayed
+
