@@ -64,7 +64,7 @@ Repro:
 
 # listrowbackground-differences
 
-**Title**: List(_:id:...) does not respect listRowBackground for content<br>
+**Title**: `List(_:id:...)` does not respect listRowBackground for content<br>
 **Feedback Number:** FB8165662
 **Submitted:** July 26, 2020
 
@@ -72,7 +72,7 @@ Repro:
 - run attached example project
 - tap/click on the “List Only” tab
 - note the first row and second row have colors applied to background colors
-- tap/click on the “List(_:id:…)” tab
+- tap/click on the “`List(\_:id:…)`” tab
 - note that none of the rows have a background color applied
 - tap/click on the “List{ForEach}” tab
 - note that all of the rows have a background color applied
