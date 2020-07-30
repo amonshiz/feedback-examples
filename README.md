@@ -79,3 +79,20 @@ Repro:
 
 Expected behavior:
 All examples would have colors applied
+
+# DisplayModeButtonIssue
+
+**Title:** NavigationView in compact vertical size class shows displayModeButtonItem assert after two pushes<br>
+**Feedback Number:** FB8209786<br>
+**Submitted:** July 29, 2020
+
+Repro steps:
+- unpack attached project
+- build for iPhone device
+- tap the “One” link
+- tap the “Two” link
+- open Xcode’s console
+- note the following:
+  ```
+     [Assert] displayModeButtonItem is internally managed and not exposed for DoubleColumn style. Returning an empty, disconnected UIBarButtonItem to fulfill the non-null contract.
+  ```
