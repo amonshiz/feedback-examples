@@ -96,3 +96,47 @@ Repro steps:
   ```
   [Assert] displayModeButtonItem is internally managed and not exposed for DoubleColumn style. Returning an empty, disconnected UIBarButtonItem to fulfill the non-null contract.
   ```
+
+## TextTruncation
+
+**Title:** Text.TruncationMode operates incorrectly with multiline content<br>
+**Feedback Number:** FB8288914<br>
+**Submitted:** August 6, 2020
+
+When a `Text` view contains text that is longer than one line and a text truncation mode is applied the truncation happens only on the final line regardless of mode.
+
+Assume the text is “This is a block of text that will show up in a text element as multiple lines. The text will fill the available space, and then, eventually, be truncated.” (pulled from the docs: https://developer.apple.com/documentation/swiftui/text/truncationmode(\_:)) Below are how they are rendered.
+
+TruncationMode.tail:
+```
+This is a block of
+text that will show
+up in a text element
+as multiple
+lines. The text will
+fill the available s…
+```
+
+TruncationMode.middle:
+```
+This is a block of
+text that will show
+up in a text element
+as multiple
+lines. The text will
+available…uncated.
+```
+
+TruncationMode.head:
+```
+This is a block of
+text that will show
+up in a text element
+as multiple
+lines. The text will
+…ally, be truncated.
+```
+
+Clearly the `.tail` case appears correctly while `.head` and `.middle` are incorrect.
+
+Check out the attached playground for repro
