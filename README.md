@@ -9,37 +9,6 @@
 - [ ] [displaymodebuttonissue](#displaymodebuttonissue)
 - [ ] [texttruncation](#texttruncation)
 
-## listview-scrollviewreader
-
-**Title:** ListView should suport ScrollViewReader<br>
-**Feedback Number:** FB8094063<br>
-**Submitted:** July 21, 2020
-
-ListView has a scroll view, it should support ScrollViewReader for programmatic scrolling to specific content. Currently there is no way to programmatically scroll a ListView to a specific row/section.
-
-Currently when a ScrollViewReader is embedded within a ListView all of the formatting that ListView provides automatically is removed. This breaks the ListView.
-
-There is no obvious way to get ListView style formatting when using a ScrollView + ScrollViewReader + (Lazy)VStack for the content. This requires the developer to reimplement the most basic ListView formatting and functionality.
-
-### Communications
-**Me** 
-_July 22, 2020_
-Tried again after seeing the following in the Xcode 12 beta 3 release notes, however the issue remains: using a List within a ScrollViewReader still does not scroll.
-
-List may now be used with ScrollViewReader . (35471164)
-
-**Apple** 
-_July 30, 2020_
-Thank you for filing this feedback report. We reviewed your report and determined the behavior you experienced is currently functioning as intended.
-
-We won’t scroll the List if there aren’t enough rows to scroll. There are only 10 rows here.
-
-You can close this feedback by clicking on the "Close Feedback" link. Thank you.
-
-### Resolution
-I was doing it wrong
-
-
 ## recents-tab-sample
 
 **Tool:** Toolbar item in principal location conflicts with navigation title regardless of mode<br>
@@ -168,3 +137,37 @@ lines. The text will
 Clearly the `.tail` case appears correctly while `.head` and `.middle` are incorrect.
 
 Check out the attached playground for repro
+
+---
+
+# Completed
+
+## listview-scrollviewreader
+
+**Title:** ListView should suport ScrollViewReader<br>
+**Feedback Number:** FB8094063<br>
+**Submitted:** July 21, 2020
+
+ListView has a scroll view, it should support ScrollViewReader for programmatic scrolling to specific content. Currently there is no way to programmatically scroll a ListView to a specific row/section.
+
+Currently when a ScrollViewReader is embedded within a ListView all of the formatting that ListView provides automatically is removed. This breaks the ListView.
+
+There is no obvious way to get ListView style formatting when using a ScrollView + ScrollViewReader + (Lazy)VStack for the content. This requires the developer to reimplement the most basic ListView formatting and functionality.
+
+### Communications
+**Me** 
+_July 22, 2020_
+Tried again after seeing the following in the Xcode 12 beta 3 release notes, however the issue remains: using a List within a ScrollViewReader still does not scroll.
+
+List may now be used with ScrollViewReader . (35471164)
+
+**Apple** 
+_July 30, 2020_
+Thank you for filing this feedback report. We reviewed your report and determined the behavior you experienced is currently functioning as intended.
+
+We won’t scroll the List if there aren’t enough rows to scroll. There are only 10 rows here.
+
+You can close this feedback by clicking on the "Close Feedback" link. Thank you.
+
+### Resolution
+I was doing it wrong
