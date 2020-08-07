@@ -1,16 +1,16 @@
 # feedback-examples
 
-## listview-scrollviewreader 
+## ~~listview-scrollviewreader~~
 
-**Title:** ListView should suport ScrollViewReader<br>
-**Feedback Number:** FB8094063<br>
-**Submitted:** July 21, 2020
+~~**Title:** ListView should suport ScrollViewReader<br>~~
+~~**Feedback Number:** FB8094063<br>~~
+~~**Submitted:** July 21, 2020~~
 
-ListView has a scroll view, it should support ScrollViewReader for programmatic scrolling to specific content. Currently there is no way to programmatically scroll a ListView to a specific row/section.
+~~ListView has a scroll view, it should support ScrollViewReader for programmatic scrolling to specific content. Currently there is no way to programmatically scroll a ListView to a specific row/section.~~
 
-Currently when a ScrollViewReader is embedded within a ListView all of the formatting that ListView provides automatically is removed. This breaks the ListView.
+~~Currently when a ScrollViewReader is embedded within a ListView all of the formatting that ListView provides automatically is removed. This breaks the ListView.~~
 
-There is no obvious way to get ListView style formatting when using a ScrollView + ScrollViewReader + (Lazy)VStack for the content. This requires the developer to reimplement the most basic ListView formatting and functionality.
+~~There is no obvious way to get ListView style formatting when using a ScrollView + ScrollViewReader + (Lazy)VStack for the content. This requires the developer to reimplement the most basic ListView formatting and functionality.~~
 
 ## recents-tab-sample
 
