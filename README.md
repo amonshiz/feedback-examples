@@ -8,6 +8,7 @@
 - [ ] [listrowbackground-differences](#listrowbackground-differences)
 - [ ] [displaymodebuttonissue](#displaymodebuttonissue)
 - [ ] [texttruncation](#texttruncation)
+- [ ] [navigationview-toolbaritems-ax](#navigationview-toolbaritems-ax)
 
 ## recents-tab-sample
 
@@ -137,6 +138,42 @@ lines. The text will
 Clearly the `.tail` case appears correctly while `.head` and `.middle` are incorrect.
 
 Check out the attached playground for repro
+
+## navigationview-toolbaritems-ax
+
+**Title:** Adding ToolbarItem to view within ScrollView within NavigationView causes error to print to console on scroll<br>
+**Feedback Number:** FB8339381<br>
+**Submitted:** August 10, 2020
+
+Extract and run the provided sample, or added the code bellow to a project and then begin scrolling.
+
+```swift
+NavigationView {
+  ScrollView(.vertical) {
+    Text("Hello, world!")
+      .toolbar(items: {
+        ToolbarItem {
+          EmptyView()
+        }
+      })
+  }
+}
+```
+
+The console will display the following error numerous times:
+"\*\*\* -[NSMutableArray addObjectsFromArray:]: array argument is not an NSArray"
+
+Setting a breakpoint within `-[NSMutableArray addObjectsFromArray:]` and printing `$arg3` shows that the system is trying to insert an NSSet and not an NSArray:
+```
+(lldb) po $arg3
+{(
+    <UIBarButtonItem: 0x7fc308308e80> view=0x7fc308410690
+)}
+```
+
+Notes:
+- Can be any view within the ToolbarItem, but this demonstrates that nothing even has to be rendered to cause the error
+- The “backtrace.txt” that is attached is also contained within the attached archive
 
 ---
 

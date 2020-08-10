@@ -1,0 +1,60 @@
+* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
+  * frame #0: 0x00007fff204422d5 CoreFoundation`-[NSMutableArray addObjectsFromArray:]
+    frame #1: 0x00007fff2ba86952 AccessibilityUtilities`+[NSArray(AXExtensions) axArrayWithPossiblyNilArrays:] + 293
+    frame #2: 0x000000010779374a UIKit`-[UINavigationBarAccessibility _accessibilityHasLeftRightButtonCountChanged] + 258
+    frame #3: 0x000000010779400e UIKit`-[UINavigationBarAccessibility _accessibilityFetchCachedNavBarElements] + 119
+    frame #4: 0x000000010779357c UIKit`-[UINavigationBarAccessibility accessibilityElements] + 28
+    frame #5: 0x00007fff2d333401 UIAccessibility`-[NSObject(AXPrivCategory) _accessibilityElements] + 69
+    frame #6: 0x00007fff2d35777d UIAccessibility`-[NSObjectAccessibility accessibilityElementCount] + 81
+    frame #7: 0x00000001077f4dba UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 57
+    frame #8: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #9: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #10: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #11: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #12: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #13: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #14: 0x00007fff2d32e556 UIAccessibility`-[NSObject(AXPrivCategory) _accessibilityBaseHitTest:withEvent:] + 3547
+    frame #15: 0x00000001077f4e13 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 146
+    frame #16: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #17: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #18: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #19: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #20: 0x00000001077f3208 UIKit`-[UIViewAccessibility __accessibilityHitTest:withEvent:] + 1589
+    frame #21: 0x00000001077f4de6 UIKit`-[UIViewAccessibility _accessibilityHitTest:withEvent:] + 101
+    frame #22: 0x00000001077fc50b UIKit`-[UIWindowAccessibility _accessibilityHitTest:withEvent:] + 138
+    frame #23: 0x00007fff2d3179a5 UIAccessibility`_copyElementAtPositionCallback + 2403
+    frame #24: 0x00007fff2bcac5cc AXRuntime`___AXXMIGCopyElementAtPosition_block_invoke + 59
+    frame #25: 0x00007fff2bcab74b AXRuntime`_handleNonMainThreadCallback + 55
+    frame #26: 0x00007fff2bcac47a AXRuntime`_AXXMIGCopyElementAtPosition + 207
+    frame #27: 0x00007fff2bcf5c79 AXRuntime`_XCopyElementAtPosition + 295
+    frame #28: 0x00007fff2bcbafba AXRuntime`mshMIGPerform + 237
+    frame #29: 0x00007fff203a7eff CoreFoundation`__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 41
+    frame #30: 0x00007fff203a72a0 CoreFoundation`__CFRunLoopDoSource1 + 614
+    frame #31: 0x00007fff203a177c CoreFoundation`__CFRunLoopRun + 2353
+    frame #32: 0x00007fff203a0960 CoreFoundation`CFRunLoopRunSpecific + 567
+    frame #33: 0x00007fff2b9e7db3 GraphicsServices`GSEventRunModal + 139
+    frame #34: 0x00007fff245f5bd9 UIKitCore`-[UIApplication _run] + 912
+    frame #35: 0x00007fff245faaea UIKitCore`UIApplicationMain + 101
+    frame #36: 0x00007fff5625ce77 SwiftUI`closure #1 (Swift.UnsafeMutablePointer<Swift.Optional<Swift.UnsafeMutablePointer<Swift.Int8>>>) -> Swift.Never in SwiftUI.(KitRendererCommon in _ACC2C5639A7D76F611E170E831FCA491)(Swift.AnyObject.Type) -> Swift.Never + 119
+    frame #37: 0x00007fff5625cdef SwiftUI`SwiftUI.runApp<A where A: SwiftUI.App>(A) -> Swift.Never + 143
+    frame #38: 0x00007fff55dd745d SwiftUI`static (extension in SwiftUI):SwiftUI.App.main() -> () + 61
+    frame #39: 0x00000001054064e1 navigationview-toolbaritems-ax`static navigationview_toolbaritems_axApp.$main(self=navigationview_toolbaritems_ax.navigationview_toolbaritems_axApp) at <compiler-generated>:0
+    frame #40: 0x0000000105406564 navigationview-toolbaritems-ax`main at navigationview_toolbaritems_axApp.swift:0
+    frame #41: 0x00007fff20256431 libdyld.dylib`start + 1
+  thread #3
+    frame #0: 0x00007fff5d8f44ce libsystem_kernel.dylib`__workq_kernreturn + 10
+    frame #1: 0x00007fff5d92baa1 libsystem_pthread.dylib`_pthread_wqthread + 390
+    frame #2: 0x00007fff5d92ab77 libsystem_pthread.dylib`start_wqthread + 15
+  thread #8, name = 'com.apple.uikit.eventfetch-thread'
+    frame #0: 0x00007fff5d8f2dfa libsystem_kernel.dylib`mach_msg_trap + 10
+    frame #1: 0x00007fff5d8f3170 libsystem_kernel.dylib`mach_msg + 60
+    frame #2: 0x00007fff203a6c39 CoreFoundation`__CFRunLoopServiceMachPort + 316
+    frame #3: 0x00007fff203a134f CoreFoundation`__CFRunLoopRun + 1284
+    frame #4: 0x00007fff203a0960 CoreFoundation`CFRunLoopRunSpecific + 567
+    frame #5: 0x00007fff208441f9 Foundation`-[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 209
+    frame #6: 0x00007fff20844468 Foundation`-[NSRunLoop(NSRunLoop) runUntilDate:] + 72
+    frame #7: 0x00007fff246ac495 UIKitCore`-[UIEventFetcher threadMain] + 464
+    frame #8: 0x00007fff2086c8a9 Foundation`__NSThread__start__ + 1042
+    frame #9: 0x00007fff5d92f109 libsystem_pthread.dylib`_pthread_start + 148
+    frame #10: 0x00007fff5d92ab8b libsystem_pthread.dylib`thread_start + 15
+
