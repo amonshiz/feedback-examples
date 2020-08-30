@@ -61,9 +61,20 @@ struct PickerModifier: ViewModifier {
 }
 
 struct LView: View {
+  @State private var date: Date = Date()
   var body: some View {
-    List(0 ..< 15) {
-      Text("\($0)")
+    List(0 ..< 25) { val in
+      NavigationLink(destination:
+        LView()
+          .navigationTitle("Second Time")
+          .toolbar(content: {
+            ToolbarItem(placement: .principal) {
+              Button {} label: { Text("Button") }
+            }
+          })
+      ) {
+        Text("\(val)")
+      }
     }
   }
 }
