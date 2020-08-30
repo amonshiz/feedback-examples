@@ -9,6 +9,7 @@
 - [ ] [displaymodebuttonissue](#displaymodebuttonissue)
 - [ ] [texttruncation](#texttruncation)
 - [ ] [navigationview-toolbaritems-ax](#navigationview-toolbaritems-ax)
+- [ ] [playground-with-sources](#playground-with-sources)
 
 ## recents-tab-sample
 
@@ -174,6 +175,48 @@ Setting a breakpoint within `-[NSMutableArray addObjectsFromArray:]` and printin
 Notes:
 - Can be any view within the ToolbarItem, but this demonstrates that nothing even has to be rendered to cause the error
 - The “backtrace.txt” that is attached is also contained within the attached archive
+
+## playground-with-sources
+**Title:** Using Sources directory causes failure to compile<br>
+**Feedback Number:** FB8584576<br>
+**Submitted:** August 30, 2020
+
+### Basic Information
+**Please provide a descriptive title for your feedback:**
+Using Sources directory causes failure to compile
+
+**Which area are you seeing an issue with?**
+Swift Playgrounds
+
+**What type of feedback are you reporting?**
+Incorrect/Unexpected Behavior
+
+**Please describe the issue:**
+If a playground has anything in the “Sources” directory then the playground is unable to compile with Xcode 12b6.
+
+**Please list the steps you took to reproduce the issue:**
+1. Create a new playground
+2. Run the playground
+3. Verify that the playground shows “Hello, playground”
+4. Add new file to Sources directory
+5. Add *nothing* to the new file
+6. Return to the playground file
+7. Run the playground again
+
+**What did you expect to happen?**
+The playground to run successfully.
+
+**What actually happened?**
+The following error was displayed in the console and the playground did *not* run.
+
+```
+expression failed to parse, fixed expression suggested:
+  import SourcesTest_Sources
+#sourceLocation(file: "SourcesTest.playground", line: 1)
+import Cocoa
+
+var str = "Hello, playground"
+```
 
 ---
 
