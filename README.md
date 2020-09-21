@@ -3,12 +3,12 @@
 
 - [x] [listview-scrollviewreader](#listview-scrollviewreader)
 - [ ] [recents-tab-sample](#recents-tab-sample)
-- [ ] [navigationtitle-large](#navigationtitle-large)
+- [x] [navigationtitle-large](#navigationtitle-large)
 - [ ] [listview-editmode-move](#listview-editmode-move)
 - [ ] [listrowbackground-differences](#listrowbackground-differences)
 - [ ] [displaymodebuttonissue](#displaymodebuttonissue)
 - [ ] [texttruncation](#texttruncation)
-- [ ] [navigationview-toolbaritems-ax](#navigationview-toolbaritems-ax)
+- [x] [navigationview-toolbaritems-ax](#navigationview-toolbaritems-ax)
 - [ ] [playground-with-sources](#playground-with-sources)
 
 ## recents-tab-sample
@@ -43,6 +43,24 @@ Repro:
 
 Expected output:
 Both uses behave the same
+
+### Communications
+**Apple** September 17, 2020, 8:16 PM
+Please verify this issue with the iOS 14 seed and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
+
+iOS 14.2 seed (18B5052h)
+https://developer.apple.com/download/
+
+If the issue persists, please attach a new sysdiagnose captured in the latest build and attach it to the bug report. Thank you.
+
+iOS sysdiagnose Instructions:
+https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/sysdiagnose_Logging_Instructions.pdf
+
+For a complete list of logging instructions visit:
+https://developer.apple.com/bug-reporting/profiles-and-logs/
+
+**Me** September 20, 2020, 9:05 PM
+This appears to have been corrected.
 
 ## listview-editmode-move
 
@@ -140,6 +158,29 @@ Clearly the `.tail` case appears correctly while `.head` and `.middle` are incor
 
 Check out the attached playground for repro
 
+### Communications
+**Apple** September 17, 2020, 1:17 PM
+
+Please verify this issue with macOS Big Sur 11 beta 7 and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
+
+macOS Big Sur 11 beta 7 (20A5374g)
+https://developer.apple.com/download/
+
+If the issue persists, please attach a new sysdiagnose captured in the latest build and attach it to the bug report.
+
+macOS sysdiagnose Instructions:
+https://developer.apple.com/services-account/download?path=/OS_X/OS_X_Logs/sysdiagnose_Logging_Instructions.pdf
+
+For a complete list of logging instructions visit:
+https://developer.apple.com/bug-reporting/profiles-and-logs/
+
+**Me** September 20, 2020, 9:06 PM
+
+This is still not fixed.
+!()[repo-images/ScreenShot2020-09-20at8.59.34PM.png]
+!()[repo-images/ScreenShot2020-09-20at8.59.39PM.png]
+!()[repo-images/ScreenShot2020-09-20at8.59.44PM.png]
+
 ## navigationview-toolbaritems-ax
 
 **Title:** Adding ToolbarItem to view within ScrollView within NavigationView causes error to print to console on scroll<br>
@@ -175,6 +216,24 @@ Setting a breakpoint within `-[NSMutableArray addObjectsFromArray:]` and printin
 Notes:
 - Can be any view within the ToolbarItem, but this demonstrates that nothing even has to be rendered to cause the error
 - The “backtrace.txt” that is attached is also contained within the attached archive
+
+### Communications
+**Apple** September 10, 2020, 11:36 PM
+Please verify this issue with the iOS 14 beta 8 and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
+
+iOS 14 beta 8 (18A5373a)
+https://developer.apple.com/download/
+
+If the issue persists, please attach a new sysdiagnose captured in the latest build and attach it to the bug report.
+
+iOS sysdiagnose Instructions:
+https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/sysdiagnose_Logging_Instructions.pdf
+
+For a complete list of logging instructions visit:
+https://developer.apple.com/bug-reporting/profiles-and-logs/
+
+**Me** September 19, 2020, 1:24 PM
+I am no longer able to reproduce this issue. Closing.
 
 ## playground-with-sources
 **Title:** Using Sources directory causes failure to compile<br>

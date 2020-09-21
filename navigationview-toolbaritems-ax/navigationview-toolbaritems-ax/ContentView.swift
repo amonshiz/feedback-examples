@@ -12,7 +12,7 @@ struct ContentView: View {
     NavigationView {
       ScrollView(.vertical) {
         Text("Hello, world!")
-          .toolbar(items: {
+          .toolbar(content: {
             ToolbarItem {
               EmptyView()
             }

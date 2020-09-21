@@ -26,9 +26,9 @@ struct ListSample: View {
       List(0..<5, id: \.self) {
         Text("\($0)")
           .padding()
-          .navigationTitle("List")
           .navigationBarTitleDisplayMode(.automatic)
       }
+      .navigationTitle("List")
     }
   }
 }
