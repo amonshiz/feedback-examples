@@ -45,7 +45,7 @@ Expected output:
 Both uses behave the same
 
 ### Communications
-**Apple** September 17, 2020, 8:16 PM
+**Apple** _September 17, 2020, 8:16 PM_
 Please verify this issue with the iOS 14 seed and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
 
 iOS 14.2 seed (18B5052h)
@@ -59,7 +59,7 @@ https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/sysdiag
 For a complete list of logging instructions visit:
 https://developer.apple.com/bug-reporting/profiles-and-logs/
 
-**Me** September 20, 2020, 9:05 PM
+**Me** _September 20, 2020, 9:05 PM_
 This appears to have been corrected.
 
 ## listview-editmode-move
@@ -159,7 +159,7 @@ Clearly the `.tail` case appears correctly while `.head` and `.middle` are incor
 Check out the attached playground for repro
 
 ### Communications
-**Apple** September 17, 2020, 1:17 PM
+**Apple** _September 17, 2020, 1:17 PM_
 
 Please verify this issue with macOS Big Sur 11 beta 7 and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
 
@@ -174,12 +174,13 @@ https://developer.apple.com/services-account/download?path=/OS_X/OS_X_Logs/sysdi
 For a complete list of logging instructions visit:
 https://developer.apple.com/bug-reporting/profiles-and-logs/
 
-**Me** September 20, 2020, 9:06 PM
+**Me** _September 20, 2020, 9:06 PM_
 
 This is still not fixed.
-!()[repo-images/ScreenShot2020-09-20at8.59.34PM.png]
-!()[repo-images/ScreenShot2020-09-20at8.59.39PM.png]
-!()[repo-images/ScreenShot2020-09-20at8.59.44PM.png]
+
+![](./repo-images/ScreenShot2020-09-20at8.59.34PM.png)
+![](./repo-images/ScreenShot2020-09-20at8.59.39PM.png)
+![](./repo-images/ScreenShot2020-09-20at8.59.44PM.png)
 
 ## navigationview-toolbaritems-ax
 
@@ -218,7 +219,8 @@ Notes:
 - The “backtrace.txt” that is attached is also contained within the attached archive
 
 ### Communications
-**Apple** September 10, 2020, 11:36 PM
+**Apple** _September 10, 2020, 11:36 PM_
+
 Please verify this issue with the iOS 14 beta 8 and update your bug report with your results by logging into https://feedbackassistant.apple.com/ or by using the Feedback Assistant app.
 
 iOS 14 beta 8 (18A5373a)
@@ -232,7 +234,8 @@ https://developer.apple.com/services-account/download?path=/iOS/iOS_Logs/sysdiag
 For a complete list of logging instructions visit:
 https://developer.apple.com/bug-reporting/profiles-and-logs/
 
-**Me** September 19, 2020, 1:24 PM
+**Me** _September 19, 2020, 1:24 PM_
+
 I am no longer able to reproduce this issue. Closing.
 
 ## playground-with-sources
@@ -294,14 +297,14 @@ Currently when a ScrollViewReader is embedded within a ListView all of the forma
 There is no obvious way to get ListView style formatting when using a ScrollView + ScrollViewReader + (Lazy)VStack for the content. This requires the developer to reimplement the most basic ListView formatting and functionality.
 
 ### Communications
-**Me** 
-_July 22, 2020_
+**Me** _July 22, 2020_
+
 Tried again after seeing the following in the Xcode 12 beta 3 release notes, however the issue remains: using a List within a ScrollViewReader still does not scroll.
 
 List may now be used with ScrollViewReader . (35471164)
 
-**Apple** 
-_July 30, 2020_
+**Apple** _July 30, 2020_
+
 Thank you for filing this feedback report. We reviewed your report and determined the behavior you experienced is currently functioning as intended.
 
 We won’t scroll the List if there aren’t enough rows to scroll. There are only 10 rows here.
