@@ -20,6 +20,7 @@ struct ContentView: View {
         } else {
           Text("Is false")
         }
+        Text("Is \(selected ? "true" : "false")")
 //      }
     }
   }

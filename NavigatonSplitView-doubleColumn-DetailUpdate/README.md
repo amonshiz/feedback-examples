@@ -1,0 +1,3 @@
+# `NavigationSplitView` does not update detail pane on state change
+
+I noticed that pretty much the exact example in the documentation for `NavigationSplitView` does not update as expected. It seems that a top level `EitherView` (or whatever an `if` converts to) does _not_ get its presentation update even though the bodies of the different clauses do get re-evaluated as expected. This can be observed by placing a text view before or after the conditional view and notice that the plain text view _does_ update. Or if you put the conditional view within some other grouping view (like a `VStack`) then the conditional view is properly updated.
